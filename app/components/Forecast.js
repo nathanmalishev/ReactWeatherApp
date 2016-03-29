@@ -40,7 +40,7 @@ function DayItem(props){
 	let icon = props.day.weather[0].icon;
 	return(
 		<div style={styles.dayContainer} onClick={props.handleClick}>
-			<img src={'./app/images/weather-icons/'+icon+'.svg'}
+			<img src={'./weather-icons/'+icon+'.svg'}
 				style={styles.image}/>
 			
 			<h4 style={styles.subHeader}>{Math.round(props.day.temp.day)}&#8451; </h4>

@@ -19,7 +19,7 @@ module.exports = {
 		loaders: [
 			{test: /\.js$/, include: __dirname+'/app', loader: 'babel-loader'},
 			{test: /\.css$/, loader: 'style-loader!css-loader'},
-			{test: /\.svg$/, loader: 'svg-inline'}
+			{ test: /\.svg$/, loader: 'svg-loader' }
 		]
 	},
 	plugins : [HTMLWebpackPluginConfig]

@@ -34,12 +34,14 @@ function Detail(props){
 	console.log(props.day.weather[0].icon)
 	let icon = props.day.weather[0].icon;
 	let date = Utils.getDate(props.day.dt);
+
+	
 	return (
 		<div style={styles.container}>
 
 			<h1 style={styles.header}>{props.city}</h1>
 			<h3 style={styles.subHeader}>{date}</h3>
-			<img src={'./app/images/weather-icons/'+icon+'.svg'} style={styles.image}/>
+			<img src={'./weather-icons/'+icon+'.svg'} style={styles.image}/>
 			
 			
 			<p>max: {Math.round(props.day.temp.max)}</p>
