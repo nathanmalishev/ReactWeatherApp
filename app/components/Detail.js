@@ -1,9 +1,8 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
-var Utils = require('../helpers/Utils');
+import React from 'react'
+import Utils from '../helpers/Utils'
 
 
-var styles = {
+const styles = {
 	container: {
 		display: 'flex',
 		flexDirection: 'column',
@@ -35,15 +34,15 @@ function Detail(props){
 	let icon = props.day.weather[0].icon;
 	let date = Utils.getDate(props.day.dt);
 
-	
+
 	return (
 		<div style={styles.container}>
 
 			<h1 style={styles.header}>{props.city}</h1>
 			<h3 style={styles.subHeader}>{date}</h3>
 			<img src={'./weather-icons/'+icon+'.svg'} style={styles.image}/>
-			
-			
+
+
 			<p>max: {Math.round(props.day.temp.max)}</p>
 			<p>min: {Math.round(props.day.temp.min)}</p>
 			<p>humidity: {Math.round(props.day.humidity)}</p>
@@ -51,4 +50,4 @@ function Detail(props){
 		)
 }
 
-module.exports = Detail;
+export default Detail;

@@ -1,17 +1,18 @@
-var React     = require('react');
-var PropTypes = React.PropTypes;
-var Detail    = require('../components/Detail');
+import React, { Component } from 'react';
+import Detail from '../components/Detail';
 
+class DetailContainer extends Component{
+  render() {
+    console.log(this.props.location.state.weather);
+    return (
+     <div>
+        <Detail
+            day={this.props.location.state.weather}
+            city={this.props.routeParams.city}
+          />
+      </div>
+     );
+  }
+}
 
-var DetailContainer = React.createClass({
-	render: function(){
-		console.log(this.props.location.state.weather)
-		return (
-			<div>
-				<Detail day={this.props.location.state.weather} city={this.props.routeParams.city}/>
-			</div>
-			)
-	}
-});
-
-module.exports = DetailContainer;
+export default DetailContainer;

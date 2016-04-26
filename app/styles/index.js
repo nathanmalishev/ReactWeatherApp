@@ -1,4 +1,4 @@
-var styles = {
+const styles = {
 	center: {
 		alignItems:'center',
 		display:'flex',
@@ -8,4 +8,4 @@ var styles = {
 	}
 }
 
-module.exports = styles;
+export default styles;

@@ -6,7 +6,7 @@ import ForecastContainer from '../containers/ForecastContainer'
 require('../main.css')
 import DetailContainer from '../containers/DetailContainer'
 
-var routes = (
+const routes = (
 	<Router history={hashHistory}>
 		<Route path='/' component={Main}>
 			<IndexRoute component={HomeContainer}></IndexRoute>
@@ -16,4 +16,4 @@ var routes = (
 	</Router>
 );
 
-module.exports = routes;
+export default routes;
